@@ -32,3 +32,18 @@ lambda = fn x, y, z -> x * y + z end
 lambda = &(&1 * &2 + &3)
 # call:
 lambda.(2, 3, 4)
+
+# Closures
+# A lambda can hold a reference to a variable outside its scope
+outside_var = 5
+my_lambda = fn -> IO.puts(outside_var) end
+# As long a a reference exists to my_lambda, the outside_var variable wont be cleaned up
+# This is a closure, holding a ref to a lambda, refs are held to all vars it uses
+# A closure captures a specific memory location, even if rebound, the lambda references the original referenced mem location
+
+outside_var = 5
+lambda = fn -> IO.puts(outside_var) end
+outside_var = 6
+lambda.()
+
+# 5 gets printed, even though outside var was rebound
