@@ -57,7 +57,7 @@ tl([1,2,3,4]) # returns [2,3,4]
 #hd and tl are both O(1), they read either the head or tail
 
 # It should be mentioned that the tail of a list need not be a list, it can be any type
-# When the til is not a list it is said to be an improper list and most standard list operations wont work
+# When the tail is not a list it is said to be an improper list and most standard list operations wont work
 # They have some special use cases though
 
 # Due to the recursive nature of a list, it is simple and efficient to push a new element to the top of a list

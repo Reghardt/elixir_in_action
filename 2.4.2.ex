@@ -25,5 +25,5 @@ true == :true
 # nil
 :nil
 nil == :nill
-# nill is somewhat similar to null in other languages
+# nil is somewhat similar to null in other languages
 # nil and false are treated as falsy values
