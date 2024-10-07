@@ -47,3 +47,13 @@ def my_fun(arg1, arg2, opts \\ []) do
 end
 
 # The opts arg defaults to an empty list
+# A MapSet is the implementation of a set, a store of unique values
+# a value can be of any type
+
+days = MapSet.new([:monday, :tuesday, :wednesday])
+
+MapSet.member?(days, :monday)
+
+# The set can be manipulated using functions from the MapSet module
+# A MapSet is also enumerable
+Enum.each(days, &IO.puts/1)
